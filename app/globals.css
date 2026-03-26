@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1d2145, #090b1d 70%);
+  color: #fff;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.menu-card {
+  width: min(560px, 92vw);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.menu-card button,
+.input-wrap button {
+  border: 0;
+  border-radius: 10px;
+  background: #5f75ff;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.loader {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  margin: 20px auto 0;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.game-wrap {
+  width: min(900px, 95vw);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.playfield {
+  position: relative;
+  height: 58vh;
+  min-height: 420px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.floating-box {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  text-transform: lowercase;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.floating-box.warning {
+  border-color: #ffd25f;
+}
+
+.floating-box.danger {
+  border-color: #ff6b6b;
+}
+
+.center-message {
+  left: 50%;
+  top: 50%;
+}
+
+.input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.input-wrap input {
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.09);
+  color: white;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.input-wrap input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
